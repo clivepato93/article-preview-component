@@ -11,6 +11,14 @@ html{
     font-size: 62.5%;
 }
 
+.n{
+    display: none;
+}
+
+.dark{
+    background-color: var(--very-dark-grayish-blue);
+}
+
 :root{
     --very-dark-grayish-blue: hsl(217, 19%, 35%);
     --desaturated-dark-blue: hsl(214, 17%, 51%);
@@ -32,35 +40,43 @@ body{
 main{
       display: flex;
       flex-direction: row;
-      width:90rem;
+      width:85rem;
       height: 35rem;
-      background-color: wheat;
+      background-color: whitesmoke;
       border-radius: 2rem;
       position: relative;
     }
 
-.div-img{
-    border-radius: 2rem  0 0 2rem;
-    height: auto;
-    background-image:url(images/drawers.jpg);
-    width: 60rem;
-    height: 35rem;
-    position: relative;
-     background-size: cover;
-     background-position: left top;
-}
+    .div-img{
+        border-radius: 2rem  0 0 2rem;
+        height: auto;
+        background-image:url(images/drawers.jpg);
+        width: 80rem;
+        height: 35rem;
+        position: relative;
+         background-size: cover;
+         background-position: left top;
+    }
 
-.info{
-    padding: 2.5rem;
-    line-height: 1.5;
-    color: var(--very-dark-grayish-blue);
-    font-size: 1.3rem;
-}
+    .info{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        /* padding: 2.5rem; */
+        line-height: 1.5;
+        color: var(--very-dark-grayish-blue);
+        font-size: 1.3rem;
+        line-height: 1.5;
+        color: var(--very-dark-grayish-blue);
+        font-size: 1.3rem;
+    }
+
 
 
 .bottom{
     position: relative;
     padding: 2.5rem;
+    margin-top: auto;
 }
 
 br{
@@ -68,11 +84,8 @@ br{
 }
 
 .person{
-    text-align: center;
     display: flex;
     width: 100%;
-
-    /* align-items: center; */
 }
 
 .person-info{ 
@@ -136,11 +149,14 @@ br{
 
 .links{
     /* border:1px solid gold; */
+    
     text-transform: uppercase;
+    background-color: var(--very-dark-grayish-blue);
     color: var(--grayish-blue);
     width:100%;
+
     letter-spacing: 1rem;
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: space-around;
 }
@@ -185,7 +201,12 @@ br{
     }
 
     .info{
-
+        display: flex;
+        flex-direction: column;
+        padding: 2.5rem;
+        line-height: 1.5;
+        color: var(--very-dark-grayish-blue);
+        font-size: 1.3rem;
         line-height: 1.5;
         color: var(--very-dark-grayish-blue);
         font-size: 1.3rem;
@@ -202,9 +223,25 @@ br{
     }
 
     .bottom{
+
         border-radius: 0 0 2rem 2rem;
         width: 35rem;
         justify-content: space-between;
+    }
+
+    .links{
+        /* border:1px solid gold; */
+        
+        text-transform: uppercase;
+        background-color: var(--very-dark-grayish-blue);
+        color: var(--grayish-blue);
+        width:100%;
+
+        font-size: 1.3rem;
+        letter-spacing: 1rem;
+        display: none;
+        align-items: center;
+        justify-content: space-around;
     }
     
 
