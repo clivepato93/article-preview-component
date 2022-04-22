@@ -1,109 +1,111 @@
 // console.log('💩')
 
-// let shareBtn = document.querySelector('.share');
-const shareBtn = document.querySelector('.share');
-const arrrow = document.querySelector('.shareIcon');
-const bottom = document.querySelector('.bottom');
-const person = document.querySelector('.person');
-const links = document.querySelector('.links');
-const links2 = document.querySelector('.links2');
-const color = getComputedStyle(document.documentElement)
-.getPropertyValue('--desaturated-dark-blue');
+let shareBtns = document.querySelectorAll('.share');
+const firstArrow = document.querySelector('.shareIcon');
+let links = document.querySelector('#linksTab');
+// const arrrow = document.querySelector('.shareIcon');
+// const bottom = document.querySelector('.bottom');
+// const person = document.querySelector('.person');
+// const links = document.querySelector('.links');
+// const links2 = document.querySelector('.links2');
+// const color = getComputedStyle(document.documentElement)
+// .getPropertyValue('--desaturated-dark-blue');
 const veryDarkGrayishBlue = getComputedStyle(document.documentElement)
 .getPropertyValue('--very-dark-grayish-blue');
+const verylight = getComputedStyle(document.documentElement)
+.getPropertyValue('--very-dark-grayish-blue');
+let toggler = false;
 
-let toggler = true;
+// // console.log(window.innerWidth>900)
 
-// console.log(window.innerWidth>900)
+// // #999999
 
-// #999999
+// function clicked() {
+//     shareBtn.addEventListener('click',function () {
+//         shareBtn.classList.toggle('shareClicked')
+//         arrrow.classList.toggle('shareBtnActive')
+//         bottom.classList.toggle('dark')
+//         person.classList.toggle('flexy')
+//         person.classList.toggle('n')
+//         links.classList.toggle('n')
+//         links.classList.toggle('flexy')
+//     })
+// }
 
+// window.addEventListener('resize',function(){
+//     console.log(window.innerWidth)
 
-if(window.innerWidth<=900){
+// if(window.innerWidth<=900){
 
     
-    shareBtn.addEventListener('click',function () {
-        shareBtn.classList.toggle('shareClicked')
-        arrrow.classList.toggle('shareBtnActive')
-        bottom.classList.toggle('dark')
-        person.classList.toggle('flexy')
-        person.classList.toggle('n')
-        links.classList.toggle('n')
-        links.classList.toggle('flexy')
-    })
-}
+//     clicked();
+// }
 
-if(window.innerWidth>900){
-
-    
-    shareBtn.addEventListener('click',function () {
-        shareBtn.classList.toggle('shareClicked')
-        arrrow.classList.toggle('shareBtnActive')
-
-        // person.classList.toggle('flexy')
-        // person.classList.toggle('n')
-        links2.classList.toggle('n')
-        links2.classList.toggle('flexy')
-    })
-}
-    // const innerHTML = `
-// <img  src="images/avatar-michelle.jpg" alt="Michelle" class="avatar">
-// <div class="person-info">
-//   <p>Michelle Appleton</p>
-//   <p>28 Jun 2020</p>  
-// </div>`
-
-
-
-// window.addEventListener('resize',function () {
-//     console.log('🥺',window.innerWidth)
-//     if(window.innerWidth<900){
-    
-//         shareBtn.addEventListener('click',function(){
-//                         person.style.display = 'none';
-//                         links.style.display = 'flex';
-//         })
-        
-//         shareBtnTwo.addEventListener('click',function(){
-//             person.style.display = 'flex';
-//             links.style.display = 'none';
-//         })
-    
-//         console.log('😁')
-//     }
 // })
 
-// if(window.innerWidth<900){
-    
-//     shareBtn.addEventListener('click',function(){
-//                     person.style.display = 'none';
-//                     links.style.display = 'flex';
-//     })
-    
-//     shareBtnTwo.addEventListener('click',function(){
-//         person.style.display = 'flex';
-//         links.style.display = 'none';
-//     })
+function btnTogglerActive(){
+    firstBtn.classList.remove('light')
+    firstBtn.classList.add('dark')
+    firstArrow.classList.add('clicked')
+    links.style.display = 'flex';
+    links.style.position = 'absolute';
+    toggler= true;
+    // firstBtn.style.backgroundColor = veryDarkGrayishBlue;
 
-//     console.log('😁')
-// }
+}
 
-// if(window.innerWidth>=900){
-//     if(toggler){
-//         shareBtn.addEventListener('click', function(){
-//         links.style.display = 'flex';
-//         toggler = false;
-//         console.log('😀', `toggle is ${toggler}`)
-//     })}
+function btnToggler(){
+    firstBtn.classList.toggle('light')
+    // firstBtn.classList.toggle('dark')
+    // firstBtn.style.backgroundColor = veryDarkGrayishBlue;
+    firstArrow.classList.toggle('clicked') 
+    links.style.display = 'none';
+    toggler= false;
 
-//     if(!toggler){
-//         shareBtn.addEventListener('click', function(){
-//         links.style.display = 'none';
-//         toggler =true;
-//         console.log('😀', `toggle is ${toggler}`)
-//     })}
+}
+
+const firstBtn = shareBtns[0];
+
+// firstBtn.addEventListener('click',btnToggler)
+
+shareBtns.forEach(btn=>{
+    btn.addEventListener('click',function () {
+        // btn.classList.toggle('shareClicked')
+        // arrrow.classList.toggle('shareBtnActive')
+        // bottom.classList.toggle('dark')
+        // person.classList.toggle('flexy')
+        // person.classList.toggle('n')
+        // links.classList.toggle('flexy')
+        // links.classList.toggle('n')
+        if(toggler==false){
+            btnTogglerActive();
+            toggler= true
+        }
+
+        else{
+            btnToggler();
+            toggler= false;
+        }
 
 
 
-// }
 
+
+
+
+        // if(toggler==false){
+        //     links.style.display = 'flex';
+        //     links.style.position = 'absolute';
+        //     toggler= true;
+        // }
+        
+        
+        // else if(toggler==true){
+
+            // links.style.display = 'none';
+            // btnToggler();
+            // toggler= false;
+            // btnToggler()
+        // }
+    }) 
+})

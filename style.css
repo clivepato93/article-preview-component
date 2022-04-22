@@ -11,9 +11,9 @@ html{
     font-size: 62.5%;
 }
 
-.flexy{
+/* .flexy{
     display: flex;
-}
+} */
 
 .n{
     display: none;
@@ -21,6 +21,11 @@ html{
 
 .dark{
     background-color: var(--very-dark-grayish-blue);
+}
+
+.light{
+    background-color: var(--light-grayish-blue);
+
 }
 
 :root{
@@ -49,6 +54,7 @@ main{
       background-color: whitesmoke;
       border-radius: 2rem;
       margin-bottom: 2rem;
+      position: relative;
     }
 
 .div-img{
@@ -66,11 +72,13 @@ main{
     flex-direction: column;
     justify-content: space-around;
     height: 30rem;
-    padding: 2.5rem 2.5rem 2.5rem 2.5rem;
+    padding: 2.5rem;
 }
 
-    .info{
+.info{
+
         display: flex;
+        position: relative;
         flex-direction: column;
         justify-content:space-around;
         line-height: 1.5;
@@ -82,6 +90,15 @@ main{
         font-size: 1.3rem;
     }
 
+h2{
+
+    font-size: 2.4rem;
+}
+
+.grey{
+    margin-top: 1rem;
+    font-size: 1.7rem;
+}
 
 .linebreakmob{
     display: none;
@@ -89,29 +106,42 @@ main{
 
 
 .bottom{
-    height: 12rem;
+    
+
+    width: 100%;
+    height: 10rem;
     display: flex;
-    /* align-items: center; */
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
     padding: 2.5rem;
-    /* margin-top: auto; */
 }
-
-
 
 .person{
-    margin-bottom: -1rem;
-    width: 100%;
-    align-items: center;
-
+    display: flex;
+    justify-content: space-between;
 
 }
+
+
+.person-info{
+
+    margin-bottom: -1rem;
+
+}
+
+.person-info :nth-child(2){
+    margin-top: .5rem;
+}
+
 
 .avatar{
     border-radius: 50%;
-    width: 3.5rem;
-    height: 3.5rem; 
+    width: 4.5rem;
+    height: 4.5rem; 
     margin-right: 2rem;
 }
+
 
 .person-info{ 
     font-size: 1.3rem;
@@ -119,86 +149,86 @@ main{
     font-weight: 700;
 }
 
-.person-info :nth-of-type(2){
-    font-weight: 400;
-    /* margin-top: .7rem; */
-}
+.person-info {
+    font-weight: 700;
+}    
 
 .share{
     border-radius: 0 0 2rem 2rem;
     margin-top: auto;
     margin-left: auto;
     display: flex;
-    background-color: var(--light-grayish-blue);
+
     justify-content: center;
     align-items: center;
     border-radius: 50%;
     width: 3.5rem;
     height: 3.5rem;    
     cursor: pointer;
-    position: relative;
-}
 
-.shareClicked{
-    border-radius: 0 0 2rem 2rem;
-    display: flex;
-    background-color: var(--desaturated-dark-blue);
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    width: 3.5rem;
-    height: 3.5rem;    
-}
-
-.shareIcon{
-    width: 2rem;
-    height: 2rem;
-}
-
-.share2{
-    margin-top: -.5rem;
-    background-color: var(--desaturated-dark-blue);
-}
-
-.shareBtnActive{
-    filter: invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg) brightness(1000%) contrast(97%);
-}
+ } 
 
 .links{
-    /* display: flex; */
-    text-transform: uppercase;
-    letter-spacing: 1rem;
-    text-align: center;    
+    display: none;
+     background-color: var(--very-dark-grayish-blue);
     color: var(--light-grayish-blue);
+     width: 23rem;
+     height: 8rem;
+     text-transform: uppercase;
+     letter-spacing: 1.1rem;
+     top: 8rem;
+     transform: translate(-500px,100px);
+     left: 88rem;
+     border-radius: 3rem;
 }
 
-.links2{
+.links::after{
     position: absolute;
-    bottom:6rem;
-    /* display: flex; */
-    justify-content: center;
-    background-color: var(--very-dark-grayish-blue);
-    width: 22rem;
+    content: '';
+    /* border: 1px solid; */
+    /* transform: rotate(135deg); */
+    z-index: -2;
+    width: 5rem;
     height: 5rem;
-    border-radius: 2rem;
+    background-color: var(--very-dark-grayish-blue);
+    transform: translate(5rem,3rem) rotate(135deg);;
 }
 
+.links .person{
+    width: 90%;
+
+}
+
+
+.links .share{
+    display: none;
+}
 
 .icons{
-
-    width: 80%;
+    width: 70%;
     display: flex;
-    align-items: center;
     justify-content: space-evenly;
 }
 
+#linksBtn{
+    background-color: var(--desaturated-dark-blue);
+}
+
+#linksBtn .shareIcon{
+    filter: invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg) brightness(1000%) contrast(97%);
+
+}
+
+.clicked{
+    filter: invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg) brightness(1000%) contrast(97%);
+}
 
  @media only screen and (max-width:90rem){
     main{
         display: flex;
         flex-direction: column;
         width:35rem;
-        height: 60rem;
+        height:65rem;
         background-color: white;
         border-radius: 2rem;
     }
@@ -215,8 +245,7 @@ main{
 
     .info{
         width: 100%;
-
-        height: 35rem;
+        height: auto;
         line-height: 1.5;
         color: var(--very-dark-grayish-blue);
         font-size: 1.3rem;
@@ -237,14 +266,40 @@ main{
 
     .bottom{
 
-
+        position: relative;
         border-radius: 0 0 2rem 2rem;
 
     }
 
     .links{
-        position: static;
-        width: 100%;
+        top: 20rem;
+     transform: translate(-500px,100px);
+     left: 50rem;
+        width: 35rem;
+        height: 10rem;
+
+
+        
+    }
+
+    .links::after{
+        display: none;
+    }
+
+    .links .person{
+        width: 70%;
+
+        justify-content: space-between;
+    }
+
+    .links .share{
+        display: flex;
+    }
+
+    .icons{
+        width: 70%;
+        display: flex;
+        justify-content: space-evenly;
     }
     
 }
