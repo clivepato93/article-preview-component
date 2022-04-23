@@ -210,7 +210,7 @@ h2{
     filter: invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg) brightness(1000%) contrast(97%);
 }
 
- @media only screen and (max-width:42rem){
+ @media only screen and (max-width:90rem){
     main{
         display: flex;
         flex-direction: column;
