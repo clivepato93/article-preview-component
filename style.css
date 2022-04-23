@@ -4,16 +4,11 @@
     padding: 0;
     margin:0;
     box-sizing: border-box;
-
 }
 
 html{
     font-size: 62.5%;
 }
-
-/* .flexy{
-    display: flex;
-} */
 
 .n{
     display: none;
@@ -47,14 +42,14 @@ body{
 }
 
 main{
-      display: flex;
-      flex-direction: row;
-      width:90rem;
-      height: 35rem;
-      background-color: whitesmoke;
-      border-radius: 2rem;
-      margin-bottom: 2rem;
-      position: relative;
+    display: flex;
+    flex-direction: row;
+    width:90rem;
+    height: 35rem;
+    background-color: whitesmoke;
+    border-radius: 2rem;
+    margin-bottom: 2rem;
+    position: relative;
     }
 
 .div-img{
@@ -76,22 +71,20 @@ main{
 }
 
 .info{
-
-        display: flex;
-        position: relative;
-        flex-direction: column;
-        justify-content:space-around;
-        line-height: 1.5;
-        width: 100%;
-        height: 100%;
-        font-size: 1.3rem;
-        line-height: 1.5;
-        color: var(--very-dark-grayish-blue);
-        font-size: 1.3rem;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content:space-around;
+    line-height: 1.5;
+    width: 100%;
+    height: 100%;
+    font-size: 1.3rem;
+    line-height: 1.5;
+    color: var(--very-dark-grayish-blue);
+    font-size: 1.3rem;
     }
 
 h2{
-
     font-size: 2.4rem;
 }
 
@@ -106,8 +99,6 @@ h2{
 
 
 .bottom{
-    
-
     width: 100%;
     height: 10rem;
     display: flex;
@@ -120,7 +111,6 @@ h2{
 .person{
     display: flex;
     justify-content: space-between;
-
 }
 
 
@@ -158,7 +148,6 @@ h2{
     margin-top: auto;
     margin-left: auto;
     display: flex;
-
     justify-content: center;
     align-items: center;
     border-radius: 50%;
@@ -185,9 +174,7 @@ h2{
 .links::after{
     position: absolute;
     content: '';
-    /* border: 1px solid; */
-    /* transform: rotate(135deg); */
-    z-index: -2;
+    z-index: -1;
     width: 5rem;
     height: 5rem;
     background-color: var(--very-dark-grayish-blue);
@@ -195,8 +182,7 @@ h2{
 }
 
 .links .person{
-    width: 90%;
-
+    width: 100%;
 }
 
 
@@ -205,6 +191,7 @@ h2{
 }
 
 .icons{
+
     width: 70%;
     display: flex;
     justify-content: space-evenly;
@@ -223,7 +210,7 @@ h2{
     filter: invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg) brightness(1000%) contrast(97%);
 }
 
- @media only screen and (max-width:90rem){
+ @media only screen and (max-width:42rem){
     main{
         display: flex;
         flex-direction: column;
@@ -239,8 +226,8 @@ h2{
         height: 23rem;
         margin-bottom: 2rem;
         background-repeat: no-repeat;
-         background-size: cover;
-         background-position: top;
+        background-size: cover;
+        background-position: top;
     }
 
     .info{
@@ -273,13 +260,10 @@ h2{
 
     .links{
         top: 20rem;
-     transform: translate(-500px,100px);
-     left: 50rem;
+        transform: translate(-500px,100px);
+        left: 50rem;
         width: 35rem;
-        height: 10rem;
-
-
-        
+        height: 10rem;   
     }
 
     .links::after{
